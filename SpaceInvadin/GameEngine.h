@@ -7,7 +7,9 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
+#include <string>
 #include "SDL.h"
+#include "SDL_ttf.h"
 
 class GameEngine {
 public:
@@ -24,12 +26,18 @@ private:
     void render();
     void resetAliens();
     void alienFire();
+    void welcomeScreen();
+    void renderText(const std::string& message, const SDL_Color& color, int x, int y);
+    void showHelpScreen();
+    bool confirmExit();
 
     SDL_Window* window;
     SDL_Renderer* renderer;
     bool running;
     bool gameOver;
     bool spacePressed;
+    bool showHelp;
+    bool exitRequested;
 
     Player player;
     std::vector<Alien> aliens;
@@ -40,6 +48,9 @@ private:
     int level;
     int alienSpeed;
     int alienDirection;
+
+    static constexpr int SCREEN_WIDTH = 800;
+    static constexpr int SCREEN_HEIGHT = 600;
 };
 
 #endif

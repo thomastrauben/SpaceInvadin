@@ -11,12 +11,6 @@
       "RelativeMoniker": "D:0:0:{570A69A1-C890-4B91-B14D-35F4E49B96AB}|SpaceInvadin\\SpaceInvadin.vcxproj|solutionrelative:SpaceInvadin\\GameEngine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{570A69A1-C890-4B91-B14D-35F4E49B96AB}|SpaceInvadin\\SpaceInvadin.vcxproj|C:\\UNI\\SPACEINVADIN\\SPACEINVADIN\\SDL_TTF.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{570A69A1-C890-4B91-B14D-35F4E49B96AB}|SpaceInvadin\\SpaceInvadin.vcxproj|C:\\USERS\\KRISTINA BENEDITOVA\\DESKTOP\\DEV\\SDL_TTF\\INCLUDE\\SDL_TTF.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{570A69A1-C890-4B91-B14D-35F4E49B96AB}|SpaceInvadin\\SpaceInvadin.vcxproj|C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{570A69A1-C890-4B91-B14D-35F4E49B96AB}|SpaceInvadin\\SpaceInvadin.vcxproj|solutionrelative:SpaceInvadin\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -25,8 +19,8 @@
       "RelativeMoniker": "D:0:0:{570A69A1-C890-4B91-B14D-35F4E49B96AB}|SpaceInvadin\\SpaceInvadin.vcxproj|solutionrelative:SpaceInvadin\\Bullet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{570A69A1-C890-4B91-B14D-35F4E49B96AB}|SpaceInvadin\\SpaceInvadin.vcxproj|C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\Bullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{570A69A1-C890-4B91-B14D-35F4E49B96AB}|SpaceInvadin\\SpaceInvadin.vcxproj|solutionrelative:SpaceInvadin\\Bullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{570A69A1-C890-4B91-B14D-35F4E49B96AB}|SpaceInvadin\\SpaceInvadin.vcxproj|C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{570A69A1-C890-4B91-B14D-35F4E49B96AB}|SpaceInvadin\\SpaceInvadin.vcxproj|solutionrelative:SpaceInvadin\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{570A69A1-C890-4B91-B14D-35F4E49B96AB}|SpaceInvadin\\SpaceInvadin.vcxproj|C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\Alien.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -37,15 +31,21 @@
       "RelativeMoniker": "D:0:0:{570A69A1-C890-4B91-B14D-35F4E49B96AB}|SpaceInvadin\\SpaceInvadin.vcxproj|solutionrelative:SpaceInvadin\\Alien.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{570A69A1-C890-4B91-B14D-35F4E49B96AB}|SpaceInvadin\\SpaceInvadin.vcxproj|C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\Bullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{570A69A1-C890-4B91-B14D-35F4E49B96AB}|SpaceInvadin\\SpaceInvadin.vcxproj|solutionrelative:SpaceInvadin\\Bullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{570A69A1-C890-4B91-B14D-35F4E49B96AB}|SpaceInvadin\\SpaceInvadin.vcxproj|C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{570A69A1-C890-4B91-B14D-35F4E49B96AB}|SpaceInvadin\\SpaceInvadin.vcxproj|solutionrelative:SpaceInvadin\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{570A69A1-C890-4B91-B14D-35F4E49B96AB}|SpaceInvadin\\SpaceInvadin.vcxproj|C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{570A69A1-C890-4B91-B14D-35F4E49B96AB}|SpaceInvadin\\SpaceInvadin.vcxproj|solutionrelative:SpaceInvadin\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{570A69A1-C890-4B91-B14D-35F4E49B96AB}|SpaceInvadin\\SpaceInvadin.vcxproj|C:\\Uni\\SpaceInvadin\\SpaceInvadin\\Constants.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{570A69A1-C890-4B91-B14D-35F4E49B96AB}|SpaceInvadin\\SpaceInvadin.vcxproj|C:\\Uni\\SpaceInvadin\\SpaceInvadin\\Constants.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SDL_ttf\\include\\SDL_ttf.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Uni\\SpaceInvadin\\SpaceInvadin\\SDL_ttf.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,7 +55,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -63,20 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Bullet.h",
-              "DocumentMoniker": "C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\Bullet.h",
-              "RelativeDocumentMoniker": "SpaceInvadin\\Bullet.h",
-              "ToolTip": "C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\Bullet.h",
-              "RelativeToolTip": "SpaceInvadin\\Bullet.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-10T14:41:44.938Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "Alien.cpp",
               "DocumentMoniker": "C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\Alien.cpp",
               "RelativeDocumentMoniker": "SpaceInvadin\\Alien.cpp",
@@ -89,20 +76,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "Alien.h",
               "DocumentMoniker": "C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\Alien.h",
               "RelativeDocumentMoniker": "SpaceInvadin\\Alien.h",
               "ToolTip": "C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\Alien.h",
               "RelativeToolTip": "SpaceInvadin\\Alien.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-12-10T14:39:27.691Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "Player.cpp",
               "DocumentMoniker": "C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\Player.cpp",
               "RelativeDocumentMoniker": "SpaceInvadin\\Player.cpp",
@@ -110,25 +97,24 @@
               "RelativeToolTip": "SpaceInvadin\\Player.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-10T14:38:58.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T14:38:58.698Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "Player.h",
               "DocumentMoniker": "C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\Player.h",
               "RelativeDocumentMoniker": "SpaceInvadin\\Player.h",
               "ToolTip": "C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\Player.h",
               "RelativeToolTip": "SpaceInvadin\\Player.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-12-10T14:38:39.12Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
               "Title": "Constants.h",
               "DocumentMoniker": "C:\\Uni\\SpaceInvadin\\SpaceInvadin\\Constants.h",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Uni\\SpaceInvadin\\SpaceInvadin\\Constants.h",
@@ -136,12 +122,11 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\Uni\\SpaceInvadin\\SpaceInvadin\\Constants.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-10T14:23:53.779Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T14:23:53.779Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\main.cpp",
               "RelativeDocumentMoniker": "SpaceInvadin\\main.cpp",
@@ -160,7 +145,7 @@
               "RelativeDocumentMoniker": "SpaceInvadin\\GameEngine.h",
               "ToolTip": "C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\GameEngine.h",
               "RelativeToolTip": "SpaceInvadin\\GameEngine.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAwwDgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-12-10T14:54:43.701Z",
               "EditorCaption": ""
@@ -171,16 +156,29 @@
               "Title": "GameEngine.cpp",
               "DocumentMoniker": "C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\GameEngine.cpp",
               "RelativeDocumentMoniker": "SpaceInvadin\\GameEngine.cpp",
-              "ToolTip": "C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\GameEngine.cpp",
-              "RelativeToolTip": "SpaceInvadin\\GameEngine.cpp",
-              "ViewState": "AgIAAMUAAAAAAAAAAAAwwNkAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\GameEngine.cpp*",
+              "RelativeToolTip": "SpaceInvadin\\GameEngine.cpp*",
+              "ViewState": "AgIAAPwAAAAAAAAAAAAwwAwBAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-29T18:17:51.156Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
+              "Title": "Bullet.h",
+              "DocumentMoniker": "C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\Bullet.h",
+              "RelativeDocumentMoniker": "SpaceInvadin\\Bullet.h",
+              "ToolTip": "C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\Bullet.h",
+              "RelativeToolTip": "SpaceInvadin\\Bullet.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-10T14:41:44.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Bullet.cpp",
               "DocumentMoniker": "C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SpaceInvadin\\SpaceInvadin\\Bullet.cpp",
               "RelativeDocumentMoniker": "SpaceInvadin\\Bullet.cpp",
@@ -188,12 +186,11 @@
               "RelativeToolTip": "SpaceInvadin\\Bullet.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-10T14:42:08.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T14:42:08.395Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "SDL_ttf.h",
               "DocumentMoniker": "C:\\Users\\Kristina Beneditova\\Desktop\\DEV\\SDL_ttf\\include\\SDL_ttf.h",
               "RelativeDocumentMoniker": "..\\SDL_ttf\\include\\SDL_ttf.h",
@@ -201,21 +198,19 @@
               "RelativeToolTip": "..\\SDL_ttf\\include\\SDL_ttf.h",
               "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-29T18:28:17.468Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-29T18:28:17.468Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "vector",
+              "DocumentIndex": 11,
+              "Title": "SDL_ttf.h",
               "DocumentMoniker": "C:\\Uni\\SpaceInvadin\\SpaceInvadin\\SDL_ttf.h",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Uni\\SpaceInvadin\\SpaceInvadin\\SDL_ttf.h",
               "ToolTip": "C:\\Uni\\SpaceInvadin\\SpaceInvadin\\SDL_ttf.h",
               "RelativeToolTip": "..\\..\\..\\..\\..\\Uni\\SpaceInvadin\\SpaceInvadin\\SDL_ttf.h",
               "ViewState": "AgIAAFMIAAAAAAAAAAAewF4IAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-10T14:24:54.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T14:24:54.646Z"
             }
           ]
         }

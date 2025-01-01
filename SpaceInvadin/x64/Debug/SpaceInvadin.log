@@ -1,1 +1,3 @@
-﻿  SpaceInvadin.vcxproj -> C:\Users\Kristina Beneditova\Desktop\DEV\SpaceInvadin\x64\Debug\SpaceInvadin.exe
+﻿  GameEngine.cpp
+C:\Users\Kristina Beneditova\Desktop\DEV\SpaceInvadin\SpaceInvadin\GameEngine.cpp(14,25): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  SpaceInvadin.vcxproj -> C:\Users\Kristina Beneditova\Desktop\DEV\SpaceInvadin\x64\Debug\SpaceInvadin.exe
