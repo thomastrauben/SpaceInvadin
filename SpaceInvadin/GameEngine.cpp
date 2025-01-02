@@ -71,6 +71,7 @@ void GameEngine::run() {
                 highScore = score;
                 saveHighScore("highscore.txt");
             }
+            resetSaveFile("save.txt");
         }
 
         render();
@@ -295,13 +296,6 @@ void GameEngine::showHelpScreen() {
 }
 
 
-//bool GameEngine::confirmExit() {
-  //  SDL_Color white = { 255, 255, 255, 255 };
-    //renderText("Are you sure you want to quit?", white, SCREEN_WIDTH / 2 - 200, SCREEN_HEIGHT / 2 - 50);
-    //renderText("Press Y to Quit, N to Resume", white, SCREEN_WIDTH / 2 - 200, SCREEN_HEIGHT / 2);
-    //return true;
-//}
-
 void GameEngine::renderText(const std::string& message, const SDL_Color& color, int x, int y) {
     TTF_Font* font = TTF_OpenFont("res/arial.ttf", 24);
     if (!font) {
@@ -421,4 +415,32 @@ void GameEngine::saveHighScore(const std::string& filename) {
         file.close();
     }
 }
+
+void GameEngine::resetSaveFile(const std::string& filename) {
+    std::ofstream saveFile(filename, std::ios::trunc); // Overwrite file
+    if (!saveFile) {
+        SDL_Log("Failed to reset save file: %s", filename.c_str());
+        return;
+    }
+
+    
+    saveFile << "Player " << SCREEN_WIDTH / 2 - 25 << " " << SCREEN_HEIGHT - 60 << " 3\n";
+    saveFile << "Level 1\n";
+    saveFile << "AlienSpeed 1\n";
+    saveFile << "AlienDirection 1\n";
+
+    int initialRows = 3;
+    int aliensPerRow = 5;
+
+    saveFile << "Aliens " << (initialRows * aliensPerRow) << "\n";
+    for (int i = 0; i < initialRows; ++i) {
+        for (int j = 0; j < aliensPerRow; ++j) {
+            saveFile << j * 100 + 50 << " " << i * 50 + 50 << " 1\n"; // Active aliens
+        }
+    }
+
+    saveFile.close();
+    SDL_Log("Save file reset to initial state: %s", filename.c_str());
+}
+
 

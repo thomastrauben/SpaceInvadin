@@ -37,6 +37,8 @@ private:
     void loadHighScore(const std::string& filename);
     void saveHighScore(const std::string& filename);
 
+    void resetSaveFile(const std::string& filename);
+
     SDL_Window* window;
     SDL_Renderer* renderer;
     bool running;
