@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <iostream>
 #include <string>
+#include <fstream>
 
 constexpr int SCREEN_WIDTH = 800;
 constexpr int SCREEN_HEIGHT = 600;
@@ -38,8 +39,11 @@ bool GameEngine::initialize() {
         std::cerr << "Renderer could not be created! SDL Error: " << SDL_GetError() << std::endl;
         return false;
     }
+    if (!loadGameState("save.txt")) {
+        resetAliens();
+    }
 
-    resetAliens();
+   // resetAliens();
     return true;
 }
 
@@ -88,10 +92,14 @@ void GameEngine::processInput() {
                 playerBullets.emplace_back(player.x + player.w / 2 - 5, player.y - 10, 5, 10);
                 spacePressed = true;
             }
-            if (event.key.keysym.sym == SDLK_ESCAPE) {
+            if (event.key.keysym.sym == SDLK_q) {
                 showHelp = !showHelp; 
             }
-           
+            if (event.key.keysym.sym == SDLK_ESCAPE) {
+                if (confirmExit()) {
+                    running = false;
+                }
+            }
         }
 
         if (event.type == SDL_KEYUP) {
@@ -272,12 +280,12 @@ void GameEngine::showHelpScreen() {
 }
 
 
-bool GameEngine::confirmExit() {
-    SDL_Color white = { 255, 255, 255, 255 };
-    renderText("Are you sure you want to quit?", white, SCREEN_WIDTH / 2 - 200, SCREEN_HEIGHT / 2 - 50);
-    renderText("Press Y to Quit, N to Resume", white, SCREEN_WIDTH / 2 - 200, SCREEN_HEIGHT / 2);
-    return true;
-}
+//bool GameEngine::confirmExit() {
+  //  SDL_Color white = { 255, 255, 255, 255 };
+    //renderText("Are you sure you want to quit?", white, SCREEN_WIDTH / 2 - 200, SCREEN_HEIGHT / 2 - 50);
+    //renderText("Press Y to Quit, N to Resume", white, SCREEN_WIDTH / 2 - 200, SCREEN_HEIGHT / 2);
+    //return true;
+//}
 
 void GameEngine::renderText(const std::string& message, const SDL_Color& color, int x, int y) {
     TTF_Font* font = TTF_OpenFont("res/arial.ttf", 24);
@@ -305,4 +313,77 @@ void GameEngine::renderText(const std::string& message, const SDL_Color& color, 
     else {
         SDL_Log("Failed to create texture: %s", SDL_GetError());
     }
+}
+
+void GameEngine::saveGameState(const std::string& filename) {
+    std::ofstream saveFile(filename);
+    if (!saveFile) {
+        SDL_Log("Failed to open save file: %s", filename.c_str());
+        return;
+    }
+
+    saveFile << "Player " << player.x << " " << player.y << " " << playerHealth << "\n";
+
+    saveFile << "Level " << level << "\n";
+    saveFile << "AlienSpeed " << alienSpeed << "\n";
+    saveFile << "AlienDirection " << alienDirection << "\n";
+
+    saveFile << "Aliens " << aliens.size() << "\n";
+    for (const auto& alien : aliens) {
+        saveFile << alien.x << " " << alien.y << " " << alien.active << "\n";
+    }
+
+    saveFile.close();
+    SDL_Log("Game state saved to %s", filename.c_str());
+}
+
+bool GameEngine::confirmExit() {
+    SDL_Color white = { 255, 255, 255, 255 };
+    renderText("Exit? Press Y to save and exit, N to cancel", white, SCREEN_WIDTH / 2 - 200, SCREEN_HEIGHT / 2);
+    SDL_RenderPresent(renderer);
+
+    SDL_Event event;
+    while (true) {
+        while (SDL_PollEvent(&event)) {
+            if (event.type == SDL_KEYDOWN) {
+                if (event.key.keysym.sym == SDLK_y) {
+                    saveGameState("save.txt"); // Save game state before exiting
+                    return true;
+                }
+                if (event.key.keysym.sym == SDLK_n) {
+                    return false;
+                }
+            }
+        }
+    }
+}
+
+bool GameEngine::loadGameState(const std::string& filename) {
+    std::ifstream loadFile(filename);
+    if (!loadFile) {
+        SDL_Log("Failed to open save file: %s", filename.c_str());
+        return false;
+    }
+
+    std::string line, label;
+    int alienCount;
+
+    loadFile >> label >> player.x >> player.y >> playerHealth;
+
+    loadFile >> label >> level;
+    loadFile >> label >> alienSpeed;
+    loadFile >> label >> alienDirection;
+
+    loadFile >> label >> alienCount;
+    aliens.clear();
+    for (int i = 0; i < alienCount; ++i) {
+        int x, y, active;
+        loadFile >> x >> y >> active;
+        aliens.emplace_back(x, y, 40, 20);
+        aliens.back().active = active;
+    }
+
+    loadFile.close();
+    SDL_Log("Game state loaded from %s", filename.c_str());
+    return true;
 }

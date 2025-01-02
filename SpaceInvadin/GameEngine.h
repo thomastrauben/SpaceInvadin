@@ -31,6 +31,10 @@ private:
     void showHelpScreen();
     bool confirmExit();
 
+    // New functions for saving and loading
+    void saveGameState(const std::string& filename);
+    bool loadGameState(const std::string& filename);
+
     SDL_Window* window;
     SDL_Renderer* renderer;
     bool running;
