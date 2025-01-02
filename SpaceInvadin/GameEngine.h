@@ -31,9 +31,11 @@ private:
     void showHelpScreen();
     bool confirmExit();
 
-    // New functions for saving and loading
     void saveGameState(const std::string& filename);
     bool loadGameState(const std::string& filename);
+
+    void loadHighScore(const std::string& filename);
+    void saveHighScore(const std::string& filename);
 
     SDL_Window* window;
     SDL_Renderer* renderer;
@@ -52,6 +54,8 @@ private:
     int level;
     int alienSpeed;
     int alienDirection;
+    int score;      
+    int highScore;
 
     static constexpr int SCREEN_WIDTH = 800;
     static constexpr int SCREEN_HEIGHT = 600;

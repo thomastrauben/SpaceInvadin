@@ -43,6 +43,10 @@ bool GameEngine::initialize() {
         resetAliens();
     }
 
+    score = 0; 
+    loadHighScore("highscore.txt"); 
+
+
    // resetAliens();
     return true;
 }
@@ -58,9 +62,17 @@ void GameEngine::run() {
             continue;         
         }
 
-        if (!gameOver) {
+        if (!gameOver && !showHelp) {
             update();
         }
+
+        if (gameOver) {
+            if (score > highScore) {
+                highScore = score;
+                saveHighScore("highscore.txt");
+            }
+        }
+
         render();
         SDL_Delay(16);
     }
@@ -157,6 +169,7 @@ void GameEngine::update() {
                 bullet.y < alien.y + alien.h && bullet.y + bullet.h > alien.y) {
                 bullet.active = false;
                 alien.active = false;
+                score += 10;
             }
         }
     }
@@ -186,6 +199,8 @@ void GameEngine::render() {
     if (gameOver) {
         SDL_Color red = { 255, 0, 0, 255 };
         renderText("Game Over!", red, SCREEN_WIDTH / 2 - 100, SCREEN_HEIGHT / 2 - 50);
+        renderText("Your Score: " + std::to_string(score), red, SCREEN_WIDTH / 2 - 100, SCREEN_HEIGHT / 2);
+        renderText("High Score: " + std::to_string(highScore), red, SCREEN_WIDTH / 2 - 100, SCREEN_HEIGHT / 2 + 50);
     }
     else if (showHelp) {
         showHelpScreen();
@@ -387,3 +402,23 @@ bool GameEngine::loadGameState(const std::string& filename) {
     SDL_Log("Game state loaded from %s", filename.c_str());
     return true;
 }
+
+void GameEngine::loadHighScore(const std::string& filename) {
+    std::ifstream file(filename);
+    if (file.is_open()) {
+        file >> highScore;
+        file.close();
+    }
+    else {
+        highScore = 0;
+    }
+}
+
+void GameEngine::saveHighScore(const std::string& filename) {
+    std::ofstream file(filename);
+    if (file.is_open()) {
+        file << highScore;
+        file.close();
+    }
+}
+
