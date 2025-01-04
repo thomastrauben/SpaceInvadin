@@ -39,6 +39,8 @@ private:
 
     void resetSaveFile(const std::string& filename);
 
+    void analyzeAliens(int* activeCount, int* totalCount, int* speed);
+
     SDL_Window* window;
     SDL_Renderer* renderer;
     bool running;

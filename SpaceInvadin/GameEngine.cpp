@@ -124,8 +124,34 @@ void GameEngine::processInput() {
 }
 
 
+void GameEngine::analyzeAliens(int* activeCount, int* totalCount, int* speed) {
+    int active = 0;
+    int total = 0;
+
+    for (const auto& alien : aliens) {
+        if (alien.active) {
+            active++;
+        }
+        total++;
+    }
+
+    *activeCount = active;
+    *totalCount = total;
+
+    *speed = 1 + (level / 2);
+}
 
 void GameEngine::update() {
+    int activeAliens = 0;
+    int totalAliens = 0;
+    int currentSpeed = 0;
+
+    analyzeAliens(&activeAliens, &totalAliens, &currentSpeed);
+    
+    alienSpeed = currentSpeed;
+
+    SDL_Log("Debug -> Active Aliens: %d, Total Aliens: %d, Alien Speed: %d", activeAliens, totalAliens, currentSpeed);
+
     for (auto& bullet : playerBullets) {
         bullet.move();
     }
