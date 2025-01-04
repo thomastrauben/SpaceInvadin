@@ -32,6 +32,9 @@ Aliens 15
 514 160 1
 614 160 1
 end
-ver 4 highscores added: 
+ver4
+Commit 4 highscores added: 
 ![image](https://github.com/user-attachments/assets/2e98cf6c-6c90-49a1-8e0a-06e918196090)
 znaleziono błąd, jednak po zakończeniu gry tekst zapisu nie resetuje się
+Commit 5:
+przy 5. zatwierdzeniu znaleziony błąd został naprawiony, ale znaleziono nowy, zapisany tekst jest ciągle resetowany na ekranie gry końcowej
