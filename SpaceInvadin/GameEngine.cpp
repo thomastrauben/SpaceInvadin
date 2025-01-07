@@ -382,7 +382,7 @@ bool GameEngine::confirmExit() {
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_KEYDOWN) {
                 if (event.key.keysym.sym == SDLK_y) {
-                    saveGameState("save.txt"); // Save game state before exiting
+                    saveGameState("save.txt"); // zapis przed wyjsciem z gry
                     return true;
                 }
                 if (event.key.keysym.sym == SDLK_n) {
@@ -443,7 +443,7 @@ void GameEngine::saveHighScore(const std::string& filename) {
 }
 
 void GameEngine::resetSaveFile(const std::string& filename) {
-    std::ofstream saveFile(filename, std::ios::trunc); // Overwrite file
+    std::ofstream saveFile(filename, std::ios::trunc); // nadpisuje plik zapisu
     if (!saveFile) {
         SDL_Log("Failed to reset save file: %s", filename.c_str());
         return;
@@ -461,7 +461,7 @@ void GameEngine::resetSaveFile(const std::string& filename) {
     saveFile << "Aliens " << (initialRows * aliensPerRow) << "\n";
     for (int i = 0; i < initialRows; ++i) {
         for (int j = 0; j < aliensPerRow; ++j) {
-            saveFile << j * 100 + 50 << " " << i * 50 + 50 << " 1\n"; // Active aliens
+            saveFile << j * 100 + 50 << " " << i * 50 + 50 << " 1\n"; // aktywuje alienów
         }
     }
 
