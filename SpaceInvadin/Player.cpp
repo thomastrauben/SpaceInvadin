@@ -11,7 +11,7 @@ void Player::moveLeft() {
 }
 
 void Player::moveRight() {
-    if (x + w < 800) { // Assuming screen width is 800
+    if (x + w < 800) {
         x += speed;
     }
 }
