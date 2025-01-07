@@ -5,15 +5,15 @@ Bullet::Bullet(int startX, int startY, int width, int height)
 }
 
 void Bullet::move() {
-    y -= 10; // Move bullet upwards
+    y -= 10; // porusza pocisk w  góre
     if (y < 0) {
-        active = false; // Deactivate bullet if it goes off-screen
+        active = false; // unicestwia pociski poza mapą
     }
 }
 
 void Bullet::render(SDL_Renderer* renderer) {
     if (active) {
-        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // White bullet
+        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // kolor biały
         SDL_Rect bulletRect = { x, y, w, h };
         SDL_RenderFillRect(renderer, &bulletRect);
     }
