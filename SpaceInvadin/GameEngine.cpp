@@ -16,7 +16,7 @@ GameEngine::GameEngine()
 }
 
 GameEngine::~GameEngine() {}
-
+//inicjalizuje assety i stan zapisu jeśli istnieje
 bool GameEngine::initialize() {
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
         std::cerr << "SDL could not initialize! SDL Error: " << SDL_GetError() << std::endl;
@@ -50,7 +50,7 @@ bool GameEngine::initialize() {
    // resetAliens();
     return true;
 }
-
+//rozpoczyna gre i zapisuje jej stan na koniec
 void GameEngine::run() {
     welcomeScreen();
     while (running) {
@@ -79,14 +79,14 @@ void GameEngine::run() {
     }
 }
 
-
+//czyści assety
 void GameEngine::cleanup() {
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     TTF_Quit();
     SDL_Quit();
 }
-
+//zczytyje inputy z klawiatury i rozpatruje je jako eventy
 void GameEngine::processInput() {
     SDL_Event event;
     while (SDL_PollEvent(&event)) {
@@ -123,7 +123,7 @@ void GameEngine::processInput() {
     }
 }
 
-
+//sprawdza obecny stan przeciwników
 void GameEngine::analyzeAliens(int* activeCount, int* totalCount, int* speed) {
     int active = 0;
     int total = 0;
@@ -140,7 +140,8 @@ void GameEngine::analyzeAliens(int* activeCount, int* totalCount, int* speed) {
 
     *speed = 1 + (level / 2);
 }
-
+//nadpisuje stan gry w każdej klatce (ruch przeciwników pocisków i gracza)
+//sprawdza kolizje,strzały obcych,progres poziomu i warunki game overu
 void GameEngine::update() {
     int activeAliens = 0;
     int totalAliens = 0;
@@ -218,7 +219,7 @@ void GameEngine::update() {
         resetAliens();
     }
 }
-
+//renderuje obiekty na ekranie tło postać obcych pociski zdrowie poziom help game over welcome
 void GameEngine::render() {
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
     SDL_RenderClear(renderer);
@@ -260,7 +261,7 @@ void GameEngine::render() {
     SDL_RenderPresent(renderer);
 }
 
-
+//resetuje obych na potrzebe nowego poziomu i zmienia ich status na aktywny
 void GameEngine::resetAliens() {
     aliens.clear();
     int rows = (level <= 2) ? 3 : (level <= 4) ? 5 : 6;
@@ -274,7 +275,7 @@ void GameEngine::resetAliens() {
         }
     }
 }
-
+//losuje który obcy strzeli
 void GameEngine::alienFire() {
     if (std::rand() % 100 < 5) {
         int shooterIndex = std::rand() % aliens.size();
@@ -283,7 +284,7 @@ void GameEngine::alienFire() {
         }
     }
 }
-
+//welcome screen
 void GameEngine::welcomeScreen() {
     bool inWelcomeScreen = true;
 
@@ -307,7 +308,7 @@ void GameEngine::welcomeScreen() {
         SDL_RenderPresent(renderer);
     }
 }
-
+//wyświetla help
 void GameEngine::showHelpScreen() {
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
     SDL_RenderClear(renderer);
@@ -321,7 +322,7 @@ void GameEngine::showHelpScreen() {
     SDL_RenderPresent(renderer);
 }
 
-
+//wyświetla text używa predefiniowanej trzczionki i rederera do wyświetlania tekstu
 void GameEngine::renderText(const std::string& message, const SDL_Color& color, int x, int y) {
     TTF_Font* font = TTF_OpenFont("res/arial.ttf", 24);
     if (!font) {
@@ -349,7 +350,7 @@ void GameEngine::renderText(const std::string& message, const SDL_Color& color, 
         SDL_Log("Failed to create texture: %s", SDL_GetError());
     }
 }
-
+//wczytuje dane z pliku savefile
 void GameEngine::saveGameState(const std::string& filename) {
     std::ofstream saveFile(filename);
     if (!saveFile) {
@@ -422,7 +423,7 @@ bool GameEngine::loadGameState(const std::string& filename) {
     SDL_Log("Game state loaded from %s", filename.c_str());
     return true;
 }
-
+//wczytuje highscore z pliki , w przypadku niepowoedzenia ustawia go na 0
 void GameEngine::loadHighScore(const std::string& filename) {
     std::ifstream file(filename);
     if (file.is_open()) {
@@ -433,7 +434,7 @@ void GameEngine::loadHighScore(const std::string& filename) {
         highScore = 0;
     }
 }
-
+//zapisuje obecny high score do pliku
 void GameEngine::saveHighScore(const std::string& filename) {
     std::ofstream file(filename);
     if (file.is_open()) {
@@ -441,7 +442,7 @@ void GameEngine::saveHighScore(const std::string& filename) {
         file.close();
     }
 }
-
+//nadpisuje dane do wczytania stanu gry
 void GameEngine::resetSaveFile(const std::string& filename) {
     std::ofstream saveFile(filename, std::ios::trunc); // nadpisuje plik zapisu
     if (!saveFile) {
