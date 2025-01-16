@@ -1,5 +1,5 @@
 #include "Bullet.h"
-
+//tworzy obiekt pocisku i jego stan poruszania
 Bullet::Bullet(int startX, int startY, int width, int height)
     : x(startX), y(startY), w(width), h(height), active(true) {
 }
