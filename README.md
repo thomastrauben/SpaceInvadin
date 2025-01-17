@@ -38,3 +38,8 @@ Commit 4 highscore:
 znaleziono błąd, jednak po zakończeniu gry tekst zapisu nie resetuje się
 Commit 5:
 przy 5. zatwierdzeniu znaleziony błąd został naprawiony, ale znaleziono nowy, zapisany tekst jest ciągle resetowany na ekranie gry końcowej
+notatki po skończeniu projektu-
+strzał przeciników i gracza mogłem zrobić jako 1 metodę z odpowiednim parametrem
+inspiracje 
+https://www.youtube.com/watch?v=m5azOBwbEmM
+https://www.youtube.com/watch?v=QQzAHcojEKg&list=PLhfAbcv9cehhkG7ZQK0nfIGJC_C-wSLrx
